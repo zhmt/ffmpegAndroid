@@ -12,6 +12,7 @@ ENABLED_CONFIG="\
 		--enable-avcodec \
 		--enable-avformat \
 		--enable-avutil \
+  		--enable-swresample \
   		--enable-swscale \
 		--enable-libdav1d \
     	--enable-demuxer=* \
@@ -26,7 +27,6 @@ ENABLED_CONFIG="\
 DISABLED_CONFIG="\
 		--disable-small \
 		--disable-zlib \
-    	--disable-swresample \
  		--disable-avfilter \
 		--disable-v4l2-m2m \
 		--disable-cuda-llvm \
