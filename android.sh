@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ### Describe Your Target Android Api or Architectures ###
-ANDROID_API_LEVEL="25"
-ARCH_LIST=("armv8a" "armv7a" "x86" "x86-64")
+ANDROID_API_LEVEL="24"
+ARCH_LIST=("armv8a")
 
 
 ### Supported Architectures "armv8a" "armv7a" "x86" "x86-64"  ####### 
@@ -20,7 +20,7 @@ ENABLED_CONFIG="\
 		--enable-decoder=h264,hevc,vp8,vp9,libdav1d,flv,vp6f,adpcm_swf,mpeg4,wmv3,mpeg1video,mpeg2video,mpeg2audio,msmpeg4v2,msmpeg4v3,theora,amrnb,amrwb,dvvideo,h263,mjpeg,png,jpeg,bmp,webp,mp3,aac,ac3,eac3,flac,opus,vorbis,pcm_s16le,pcm_s24le,alac,wma,ass,ssa,mov_text,subrip,webvtt,dvbsub,dvdsub \
 		--enable-parser=* \
   		--enable-bsf=* \
-		--enable-shared "
+		--enable-static "
 
 
 ### Disable FFMPEG BUILD MODULES ####
@@ -34,7 +34,7 @@ DISABLED_CONFIG="\
 		--disable-libxml2 \
 		--disable-avdevice \
 		--disable-network \
-		--disable-static \
+		--disable-shared \
 		--disable-debug \
 		--disable-ffplay \
   		--disable-ffprobe \
